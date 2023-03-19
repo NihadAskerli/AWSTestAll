@@ -33,6 +33,7 @@ public class PhotoController {
                 .body(resource);
     }
 
+    @CrossOrigin
     @GetMapping("/url")
     public ResponseEntity<String> getUrl() {
         String url = service.getFile().toString();
