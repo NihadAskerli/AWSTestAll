@@ -1,6 +1,7 @@
 package com.example.springsecurity.controller;
 
 
+import com.example.springsecurity.models.Photo;
 import com.example.springsecurity.service.PhotoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ByteArrayResource;
@@ -35,10 +36,9 @@ public class PhotoController {
 
     @CrossOrigin
     @GetMapping("/url")
-    public ResponseEntity<String> getUrl() {
-        String url = service.getFile().toString();
-        service.savePhoto(url);
-        return ResponseEntity.ok(service.getFile().toString());
+    public ResponseEntity<Photo> getUrl(@PathVariable Long id) {
+    Photo photo=service.getByIdPhoto(id);
+        return ResponseEntity.ok(photo);
 
     }
 

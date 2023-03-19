@@ -83,7 +83,10 @@ public class PhotoService {
 
     public URL getFile() {
         URL url = s3Client.getUrl(bucketName, "1679140486129_CvSekil.png");
-
         return url;
     }
+    public Photo getByIdPhoto(Long id){
+        return photoRepo.getById(id);
+    }
+
 }
