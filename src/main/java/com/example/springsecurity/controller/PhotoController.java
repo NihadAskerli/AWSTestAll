@@ -36,9 +36,9 @@ public class PhotoController {
 
     @CrossOrigin
     @GetMapping("/url")
-    public ResponseEntity<Photo> getUrl(@PathVariable Long id) {
-    Photo photo=service.getByIdPhoto(id);
-        return ResponseEntity.ok(photo);
+    public ResponseEntity<Photo> getUrl() {
+//    Photo photo=service.getByIdPhoto(id);
+        return ResponseEntity.ok(new Photo(1l,"https://photosjava.s3.amazonaws.com/1679140486129_CvSekil.png"));
 
     }
 
