@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "security.jwt",
+      "type": "com.example.springsecurity.config.JWTProperties",
+      "sourceType": "com.example.springsecurity.config.JWTProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "security.jwt.secret-key",
+      "type": "java.lang.String",
+      "sourceType": "com.example.springsecurity.config.JWTProperties"
+    }
+  ],
+  "hints": []
+}
